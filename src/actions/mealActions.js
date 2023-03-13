@@ -22,7 +22,6 @@ export const startFetchCategories = async (dispatch) => {
         dispatch({type: FETCH_CATEGORY_BEGIN});
         const response = await axios.get(`${CATEGORIES_URL}`)
         dispatch({type: FETCH_CATEGORY_SUCCESS, payload: response.data.categories});
-        
     } catch (error) {
         dispatch({type: FETCH_CATEGORY_ERROR, payload: error.message})
     }
@@ -31,7 +30,7 @@ export const startFetchCategories = async (dispatch) => {
 export const startFetchSingleMeal = async(dispatch, id) => {
     try {
         dispatch({type: FETCH_SINGLE_MEAL_BEGIN});
-        const response = await axios.get(`${MEAL_SINGLE_URL}`);
+        const response = await axios.get(`${MEAL_SINGLE_URL}${id}`);
         dispatch({type: FETCH_SINGLE_MEAL_SUCCESS, payload: response.data.meals});
 
     } catch (error) {

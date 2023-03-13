@@ -12,8 +12,8 @@ export default function HomePage() {
   return (
     <main className='main-content'>
       
-      {/* { (mealsLoading) ? <Loader /> : (meals === null) ? <NotFound /> : (meals?.length) ? <MealList meals = {meals} /> : "" } */}
-      <MealList meals = {meals} /> 
+      { (mealsLoading) ? <Loader /> : (meals === null) ? <NotFound /> : (meals?.length) ? <MealList meals = {meals} /> : "" }
+      {/* <MealList meals = {meals} />  */}
        {/* { (categoryLoading) ? <Loader /> : <CategoryList categories = {categories} /> }  */}
 
       <CategoryList categories={categories}/>

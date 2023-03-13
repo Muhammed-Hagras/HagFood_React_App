@@ -14,7 +14,7 @@ function App() {
     <Sidebar/>
     <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/maeal:id' element={<MealDetails/>}/>
+      <Route path="/meal/:id" element={<MealDetails/>}/>
       <Route path='/meal/category/:name' element={<Category/>}/>
       <Route path='*' element={<Error/>}/>
     </Routes>

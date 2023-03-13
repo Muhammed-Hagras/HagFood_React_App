@@ -16,6 +16,7 @@ import {
 
 export const mealReducer = (state, action) => {
   switch (action.type) {
+    //CATEGORY
     case FETCH_CATEGORY_BEGIN:
       return {
         ...state,
@@ -35,7 +36,7 @@ export const mealReducer = (state, action) => {
         categoryLoading: false,
         CategoryError: true,
       };
-
+      // MEALS
     case FETCH_MEALS_BEGIN:
       return {
         ...state,
@@ -46,8 +47,8 @@ export const mealReducer = (state, action) => {
       console.log(action.payload)
       return {
         ...state,
-        mealLoading: false,
-        meal: action.payload,
+        mealsLoading: false,
+        meals: action.payload,
       };
 
     case FETCH_MEALS_ERROR:
@@ -56,6 +57,7 @@ export const mealReducer = (state, action) => {
         mealsLoading: false,
         mealsError: true,
       };
+      // SINGLE_MEAL
     case FETCH_SINGLE_MEAL_BEGIN:
       return {
         ...state,
@@ -73,6 +75,7 @@ export const mealReducer = (state, action) => {
         mealLoading: false,
         mealError: true,
       };
+      // CATEGORY_MEALS
     case FETCH_CATEGORY_MEALS_BEGIN:
       return {
         ...state,
