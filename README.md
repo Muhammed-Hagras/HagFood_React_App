@@ -1,5 +1,5 @@
 # Hello
-This is a Food shop app using REact based on context api.
+This is a Food shop app using React based on context api.
 which contains some features such as:
 * Search Form for your favourie cuisines.
 * Food categories.
